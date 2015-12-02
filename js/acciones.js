@@ -14,7 +14,9 @@ document.addEventListener("deviceready",function(){
 			{
 				$('#contenido').append('<div><div><div style="display:inline-block"><img src="#"></div><div style="display:inline-block"><h1>'+ datosProducto.producto[x].nombreProducto +' </h1><h2> '+datosProducto.producto[x].marcaProducto+' </h2></div></div><div><h2> '+datosProducto.producto[x].precioUnitario+' </h2><h2> '+datosProducto.producto[x].precioMayoreo+' </h2></div></div>');
 			}
-			$('#PaginaMI').trigger('pagecreate');
+			$(':mobile-pagecontainer').pagecontainer('change', '#PaginaMI',{
+				transition: 'pop'
+			});
 			}
 		});
 			
